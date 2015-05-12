@@ -1,0 +1,97 @@
+.wrapper
+    width: 960px
+    margin: 10px auto
+    h1
+        margin: 0px
+    h4
+        margin: 0px
+#map
+    margin-top: 20px
+    height: 540px
+    width: 960px
+    background: black
+    border: 1px solid black
+    box-shadow: 0.5px 0.5px 3px black
+
+nav
+    position: absolute
+    z-index: 1
+    width: 200px
+    background: white
+    opacity: 0.9
+    right: 10px
+    top: 10px
+    padding: 10px
+    border: 1px grey solid
+    border-radius: 2px
+    box-shadow: 0.5px 0.5px 1px black
+
+
+    .collapse
+        display: block
+
+
+    a
+        display: block
+        text-decoration: none
+        text-align: right
+        font-size: 10px
+        text-transform: uppercase
+        font-weight: bold
+        padding: 3px
+        -webkit-font-smoothing: antialiased
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004)
+        &:hover
+            background: rgb(0, 111, 156)
+            color: white
+
+
+
+    .active
+        background: rgb(0, 111, 156)
+        color: white
+        text-shadow: 1px 1px 1px rgb(0, 111, 156)
+
+
+
+.popup
+    span 
+        display: block
+
+    .rank
+        width: 2ch
+        text-align: center
+        font-weight: bold
+        color: white
+        position: absolute
+        top: -15px
+        left: -10px
+        background: black
+        padding: 7px
+        border-radius: 50%
+        border: 2px solid #2c3e50
+    .name 
+        font-size: 16px
+        a
+            text-decoration: none
+
+
+.disclaimer
+    font-size: 9px
+    text-transform: uppercase
+
+.custom-popup .leaflet-popup-content-wrapper 
+    background: #2c3e50
+    color: #fff
+    line-height: 24px
+  
+.custom-popup .leaflet-popup-content-wrapper a 
+    color: rgba(255,255,255,0.5)
+  
+.custom-popup .leaflet-popup-tip-container 
+    width: 30px
+    height: 15px
+
+.custom-popup .leaflet-popup-tip 
+    background: #2c3e50
+    
