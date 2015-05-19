@@ -1,12 +1,14 @@
 var BP = BP,
     turf = turf,
-    L = L;
+    L = L,
+    markers = new L.MarkerClusterGroup();
 
-var markers = new L.MarkerClusterGroup();
+
                  
                
-
+//
 //FUNCTIONS
+//
 BP.assignPop = function (feature, layer) {
     layer.bindPopup(
         "<div class='popup'> " +
@@ -40,12 +42,6 @@ BP.style =  function(feature) {
 };
 
 
-BP.beerIcon = L.AwesomeMarkers.icon({
-    prefix: 'ion', //font awesome rather than bootstrap
-    markerColor: 'orange', // see colors above
-    icon: 'beer'
-});
-
 BP.togglePoints = function(style) {
     markers = new L.MarkerClusterGroup();
 
@@ -69,7 +65,11 @@ BP.toggleState = function(style){
 
 
 };
+
+
+//
 //INIT MAP
+//
 BP.map = L.map('map', {
     center: [40, -98],
     zoom: 4,
@@ -77,11 +77,20 @@ BP.map = L.map('map', {
 });
 BP.tiles = new L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png').addTo(BP.map);
 BP.statesRef = L.geoJson(BP.statesData);
+BP.beerIcon = L.AwesomeMarkers.icon({
+    prefix: 'ion', //font awesome rather than bootstrap
+    markerColor: 'orange', // see colors above
+    icon: 'beer'
+});
+
+//defaults to ipa
 BP.togglePoints('IPA');
 BP.toggleState('IPA');
 
 
-
+//
+// INTERACTIVITY
+//
 
 $('nav a').on('click', function() {
     BP.map.removeLayer(markers);

@@ -1,6 +1,6 @@
-var BP = {}; 
-
-BP.styles = {};
+var BP = {
+    styles: {}
+}; 
 
 
 BP.styles.paleAle = {
