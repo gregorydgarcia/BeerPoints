@@ -29,7 +29,7 @@ L.MarkerClusterGroup = L.FeatureGroup.extend({
 		animateAddingMarkers: false,
 
 		//Increase to increase the distance away that spiderfied markers appear from the center
-		spiderfyDistanceMultiplier: 1,
+		spiderfyDistanceMultiplier: 2,
 
 		// When bulk adding layers, adds markers in chunks. Means addLayers may not add all the layers in the call, others will be loaded during setTimeouts
 		chunkedLoading: false,
